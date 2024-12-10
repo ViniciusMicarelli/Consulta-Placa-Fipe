@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Preço de Veículo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Consulta de Preço de Veículo</h1>
+    <div class="form-container">
+      <label for="referencia">Referência:</label>
+      <select id="referencia" disabled></select>
+
+      <label for="tipo_veiculo">Tipo de Veículo:</label>
+      <select id="tipo_veiculo" disabled>
+        <option value="">-</option>
+        <option value="1">Carro</option>
+        <option value="2">Moto</option>
+        <option value="3">Caminhão</option>
+      </select>
+
+      <label for="marca">Marca:</label>
+      <select id="marca" disabled>
+        <option value="">-</option>
+      </select>
+
+      <label for="modelo">Modelo:</label>
+      <select id="modelo" disabled>
+        <option value="">-</option>
+      </select>
+
+      <label for="ano">Ano:</label>
+      <select id="ano" disabled>
+        <option value="">-</option>
+      </select>
+
+      <button id="search" disabled>Consultar</button>
+    </div>
+
+    <div id="resultado"></div>
+    <div id="revenda" class="revenda-info"></div>
+    <div id="pecas-defeito" class="pecas-defeito">
+        <p><strong>Peças com defeito:</strong> <span id="qtd-defeitos">0</span></p>
+        <button id="add-defeito">Adicionar peça com defeito</button>
+        <button id="remover-pecas" class="btn">Remover Peças com Defeito</button>
+        
+        <div>
+          <label for="motor-checkbox">Motor com defeito</label>
+          <input type="checkbox" id="motor-checkbox">
+          <label for="cambio-checkbox">Câmbio com defeito</label>
+          <input type="checkbox" id="cambio-checkbox">
+        </div>
+        <p id="valor-final"></p>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
